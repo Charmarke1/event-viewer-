@@ -69,10 +69,20 @@ Same process for filtering multiple Event IDs, **Window > security > Action > fi
   
 <img src="https://i.imgur.com/4LC4auc.png"/>
 
--Right-click on Security, then select Save Filtered log As....
+- Right-click on Security, then select Save Filtered log As....
 
-<img src="<img src="https://i.imgur.com/4LC4auc.png"/>"/>
+<img src="https://i.imgur.com/1sXTPYd.png"/>
 
+- Now time to export the file in **.evtx** format, choose the emplacement and title for not losing the data and save.
 
+<img src="https://i.imgur.com/6MkXpON.png"/>
+
+- To export successfully click on **Display information for these languages:** and choose your Language
+
+<img src="https://i.imgur.com/8OfGQmE.png"/>
+
+- As you can see the file it's on the Desktop 
+
+<img src="https://i.imgur.com/YTq35bH.png"/>
   
   
