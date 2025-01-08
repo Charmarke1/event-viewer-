@@ -9,13 +9,70 @@
 
 **This repository provides a step-by-step guide, screenshots, and example log files to help users**:
 
-- Understand how to monitor login activities.
+1. Understand how to monitor login activities.
 - Learn how to filter and export important event logs (like successful and failed logins).
 - Set up Group Policy for auditing logon events across the network.
 
-  **The tools use in this project**:
+**The tools use in this project**:
+  - **Vitual Machine** / Domain Controller / a domain.
   - **Event Viewer** for accessing security logs.
   - **Group Policy Management** for configuring audit settings.
   - **Excel** for reviewing and analyzing exported logs.
 
 By the end of this project, users will be able to monitor login activities, track potential security issues, and maintain a secure environment in their Azure lab or similar network.
+
+
+## Lab Instruction 
+
+**Step 1: Monitoring Logs**
+
+- Login on your Domain Controller, a right click on your Window key in the domain controller 
+ to see **Event Viewer** then left click on it.
+
+<img src="https://i.imgur.com/N7EKLCs.png"/>
+
+- Now that you are on **Event Viewer** Navigate to **Windows** Logs > **Security**.
+
+<img src="https://i.imgur.com/QM5h345.png"/>
+
+- Expand **Window key** to see the **security key** and click on it.
+  
+<img src="https://i.imgur.com/SWIkpXl.png"/>
+
+- There you are, then click on the **filter current log...** Under **Actions** for filtering **Successful** and **failed** logs. 
+
+<img src="https://i.imgur.com/XU5faDP.png"/>
+
+- **Erase** < All Event IDs >, for filtering Security Logs and type **4624** (Succesful login Event ID).
+
+<img src="https://i.imgur.com/XjpQk7D.png"/>
+
+<img src="https://i.imgur.com/ejfru1P.png"/>
+
+- **Erase** < All Event IDs >, for filtering specific Security Logs and type **4625** (failed login Even ID).
+
+<img src="https://i.imgur.com/utOyYoC.png"/>
+
+<img src="https://i.imgur.com/6OGi4FH.png"/>
+
+**Step 2: Exporting logs to a file**
+
+- **Why export logs to a file ?**  if you encounter suspicious activity (e.g., multiple failed logins), you can analyze exported logs offline to identify issues without needing constant access to the server. Sharing logs with others becomes easier when they're saved in a portable format.
+
+- You can also filter more than one Event ID at the same time for having logs in one file, by an commas you can filtre two or three different Event ID, and we gonna use this method for **export** our logs.
+  
+Same process for filtering multiple Event IDs, **Window > security > Action > filter current log... and type 4624,4625**
+
+<img src="https://i.imgur.com/2teFplw.png"/>
+
+- As you can see we have both Event ID 4624 and 4625 filtered 
+  
+<img src="https://i.imgur.com/4LC4auc.png"/>
+
+-Right-click on Security, then select Save Filtered log As....
+
+<img src="<img src="https://i.imgur.com/4LC4auc.png"/>"/>
+
+
+  
+  
