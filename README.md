@@ -109,5 +109,23 @@ And this the end of export succesful and failed logs from **Event Viewer** to th
 - Click OK.
 
 <img src="https://i.imgur.com/HovzoJn.png"/>
-  
-  
+
+- Expand mydomain.com Key, Right-click your selected GPO **Audit Login Events Policy** and choose Edit.
+
+<img src="https://i.imgur.com/j5yUtFC.png"/>
+
+- The Group Policy Management Editor will open.
+
+<img src="https://i.imgur.com/hYd0HOZ.png"/>  
+
+-Navigate to the following path: **Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Audit Policy**
+
+<img src="https://i.imgur.com/AMGCaLJ.png"/> 
+
+- In the right pane, double-click **Audit logon events**.
+In the dialog box:
+- Check Success to log successful login attempts.
+- Check Failure to log failed login attempts.
+- Click OK.
+
+<img src="https://i.imgur.com/PHtuCq1.png"/>
