@@ -25,7 +25,7 @@ By the end of this project, users will be able to monitor login activities, trac
 ## Lab Instruction 
 
 **Step 1: Monitoring Logs**
-
+---
 - Login on your Domain Controller, a right click on your Window key in the domain controller 
  to see **Event Viewer** then left click on it.
 
@@ -56,7 +56,7 @@ By the end of this project, users will be able to monitor login activities, trac
 <img src="https://i.imgur.com/6OGi4FH.png"/>
 
 **Step 2: Exporting logs to a file**
-
+---
 - **Why export logs to a file ?**  if you encounter suspicious activity (e.g., multiple failed logins), you can analyze exported logs offline to identify issues without needing constant access to the server. Sharing logs with others becomes easier when they're saved in a portable format.
 
 - You can also filter more than one Event ID at the same time for having logs in one file, by an commas you can filtre two or three different Event ID, and we gonna use this method for **export** our logs.
@@ -84,5 +84,30 @@ Same process for filtering multiple Event IDs, **Window > security > Action > fi
 - As you can see the file it's on the Desktop 
 
 <img src="https://i.imgur.com/YTq35bH.png"/>
+
+And this the end of export succesful and failed logs from **Event Viewer** to the desktop.
+
+**Step 3: guide to set up a Group Policy to track login events in your Azure Lab**
+---
+**Why setting up a group policy to track login event?**  Without Group Policy, some computers might not record the logs you need (like failed, and successful logins). Group Policy ensures:
+
+1 Consistency: All computers follow the same rule to log events.
+2 Automation: You don’t have to manually enable logging on each machine.
+- Login on your Domain Controller, type on the search bar in the domain controller **Group Policy Management** then double click on it.
+
+<img src="https://i.imgur.com/HzIK4s5.png"/>
+
+- You can see my domain name = **mydomain.com** on the Group Policy Management 
+
+<img src="https://i.imgur.com/UoqoWLA.png"/>
+
+- Right-click on mydomain.com > Create a GPO in this domain, and Link it here....
+
+<img src="https://i.imgur.com/C8cnXxB.png"/>
+
+- Name the new GPO (e.g., "Audit Login Events Policy").
+- Click OK.
+
+<img src="https://i.imgur.com/HovzoJn.png"/>
   
   
