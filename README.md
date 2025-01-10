@@ -118,7 +118,7 @@ And this the end of export succesful and failed logs from **Event Viewer** to th
 
 <img src="https://i.imgur.com/hYd0HOZ.png"/>  
 
--Navigate to the following path: **Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Audit Policy**
+- Navigate to the following path: **Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Audit Policy**
 
 <img src="https://i.imgur.com/AMGCaLJ.png"/> 
 
@@ -129,3 +129,43 @@ In the dialog box:
 - Click OK.
 
 <img src="https://i.imgur.com/PHtuCq1.png"/>
+
+- You all set close the Tab.
+
+**Step 4: Advanced Aaudit Policy Configuration**
+---
+**Why Use Advanced Audit Policies?**
+
+Imagine you’re the security guard at a school, and you not only want to know who came in but also things like:
+
+- How they tried to get in.
+- What door or window they used.
+- If they left any clues behind.
+  
+This is what the Advanced Audit Policy helps with. It collects more specific details about login activity, like the location or method someone used to log in.
+
+**How to set it up**
+---
+- Go to **Group Management Policy** again, Expand mydomain.com Key, Right-click on the GPO we have previously create **Audit Login Events Policy** and choose Edit.
+
+<img src="https://i.imgur.com/j5yUtFC.png"/>
+
+- Follow this path to find the advanced settings: **Computer Configuration > Policies > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Audit Policies > Logon/Logoff** in the right panel choose **Audit Other Logon/Logoff Events**.
+- Choose the Event You Want to Track: Success and Failure
+- Click OK
+
+(If it's difficult to see the image you can double click to zoom in)
+
+<img src="https://i.imgur.com/YcysJKR.png"/>
+
+**What Happens After Setting This Up?**
+---
+Now, your system will collect more detailed information about each login. For example:
+
+- It can tell you where the login attempt came from (like a specific computer or IP address).
+- It will log both successful and failed attempts with more details.
+
+You’ll still view all this information in Event Viewer, but now the logs will have more specific details.
+ 
+
+
